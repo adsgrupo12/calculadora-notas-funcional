@@ -1,0 +1,14 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Testes
+.pytest_cache/
+
+# SO
+.DS_Store
+Thumbs.db
+
+# Streamlit (se usar)
+.streamlit/secrets.toml
