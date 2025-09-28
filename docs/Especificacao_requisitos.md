@@ -61,11 +61,14 @@ Utilizar, obrigatoriamente, conceitos de Programação Funcional no código-font
 | RNF03    | `tests/test_stats.py`                                                                         | arquivo contendo as funções de teste |
 
 ## Papéis dos membros da equipe
-- **PO/Documentação (Francisco Riomar Barros Filho)**: manter requisitos, mapear RF/RNF → funções, preparar README/relatório, coletar uso do chatbot.
+- **Francisco Riomar Barros Filho**: implementação das funções puras e lógica de negócio - core/stats.py e tests/test_stats.py. Publicar projeto no github.
 
-- **Lógica funcional (Cezarnildo Moreira da Silva e Francisco Augusto de Oliveira Filho)**
-  : implementação das funções puras e lógica de negócio - core/stats.py e tests/test_stats.py.
+- **Lucas Pires Albuquerque**: implementação das funções puras e lógica de negócio - core/stats.py e tests/test_stats.py.
 
-- **Entrada e validação (José Claudecir Silva de Lima e Lucas Pires Albuquerque)**: core/transform.py, adapters/csv_io.py, tests/test_transform.py.
+- **Cezarnildo Moreira da Silva**: manter requisitos, mapear RF/RNF → funções, preparar README/relatório.
 
-- **(UI e integração) Francisco Rodrigues de Oliveira Lima e Francisco Riomar Barros Filho**: app_streamlit.py, gráficos, tratamento de erros, empacota tudo.
+- **Francisco Augusto de Oliveira Filho**: Responsável pelo Front-End. (app_streamlit.py, gráficos, etc)
+
+- **José Claudecir Silva de Lima**: Entrada e validação --> core/valida_csv.py, adapters/csv_io.py.
+
+- **Francisco Rodrigues de Oliveira Lima**: Front-End (app_streamlit.py, gráficos, etc).
