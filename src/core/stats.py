@@ -1,5 +1,8 @@
-#Esse arquivo contém as funções utilizadas para fazer cálculos estatísticos
+#Esse é o principal arquivo do trabalho, pois contém as funções utilizadas para fazer cálculos estatísticos
+#Aqui é onde utilizamos os conceitos de programação funcional para valer!
 
+
+#Ativa anotações de tipo mais modernas
 
 from __future__ import annotations
 from functools import reduce 
@@ -9,14 +12,14 @@ from typing import Callable, Dict, List
 
 def _checar_lista_vazia(notas: List[float]) -> None:
     if not notas:
-        raise ValueError("A lista de notas está vazia. Não é possível fazer qualquer estatística.")
+        raise ValueError("A lista de notas está vazia. Desse modo, não é possível fazer qualquer estatística.") #Se a lista de notas estiver vazia, lança uma exceçao!
     
-def quantidade_notas(notas: List[float]) -> int: #RF09
+def quantidade_notas(notas: List[float]) -> int: #RF09 -> retorna a quantidade de registros de notas -> caso não haja erro de processamento em alguma nota.
     return len(notas) 
 
-def media(notas: List[float]) -> float: # -> RF02
+def media(notas: List[float]) -> float: # -> RF02 -> Basicamente calcula a média
     _checar_lista_vazia(notas)
-    soma = reduce(lambda acum, n: acum + n, notas, 0.0) 
+    soma = reduce(lambda acum, n: acum + n, notas, 0.0) #Vejam a função lambda, utilizada dentro do reduce aqui. Soma todas as notas
     return soma/len(notas)
 
 def mediana(notas: List[float]) -> float: # -> RF03
